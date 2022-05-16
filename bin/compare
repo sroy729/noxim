@@ -1,0 +1,20 @@
+nohup ./noxim -dimx 8 -dimy 8 -dimz 4 -traffic transpose1 -pir 0.025 poisson -routing PTDBA -sel thermal -sim 10000000 -warmup 10000 -seed 0 -clean 5000 -tquota 0 -predict 0 -throt vertical -selinfo buf -tla 1 -tsh 97.0 > log_PTDBA_tquota0_transpose1
+
+nohup ./noxim -dimx 8 -dimy 8 -dimz 4 -traffic transpose1 -pir 0.025 poisson -routing TTABR -sel bufferlevel -sim 10000000 -warmup 10000 -seed 0 -clean 5000 -tquota 0 -predict 0 -throt vertical -selinfo buf -tla 1 -tsh 94.1 > log_TTABR_tquota0_transpose1
+
+
+nohup ./noxim -dimx 8 -dimy 8 -dimz 4 -traffic transpose1 -pir 0.025 poisson -routing PTDBA -sel thermal -sim 10000000 -warmup 10000 -seed 0 -clean 5000 -tquota 1 -predict 0 -throt vertical -selinfo buf -tla 1 -tsh 97.0 > log_PTDBA_tquota1_transpose1
+
+
+nohup ./noxim -dimx 8 -dimy 8 -dimz 4 -traffic transpose1 -pir 0.025 poisson -routing TTABR -sel bufferlevel -sim 10000000 -warmup 10000 -seed 0 -clean 5000 -tquota 1 -predict 0 -throt vertical -selinfo buf -tla 1 -tsh 94.1 > log_TTABR_tquota1_transpose1
+
+
+make clean ; make ; ./noxim -dimx 8 -dimy 8 -dimz 4 -sim 200000 -throt normal -sen_alloc table sensor_placement.txt -temp_recover linear rector_linear_coef.txt
+
+
+./noxim -dimx 6 -dimy 6 -dimz 4 -traffic random -pir 0.025 possion -routing xyz -sim 10000000 -warmup 10000 -seed 0 -clean 5000 -throt normal -buffer 8 -size 8 8 -tquota 0 -predict 0 -tla 1
+
+./noxim -dimx 6 -dimy 6 -dimz 4 -traffic random -pir 0.025 possion -routing xyz -sim 10000000 -warmup 10000 -seed 0 -clean 5000 -throt vertical -buffer 8 -size 8 8 -tquota 1 -predict 0 -tsh 93.1 -tla 1 -sen_alloc table ./doc/random_center_place_04.txt -temp_recover linear ./doc/random_center_coef_04.txt
+
+./noxim -dimx 6 -dimy 6 -dimz 4 -traffic random -pir 0.025 possion -routing xyz -sim 10000000 -warmup 10000 -seed 0 -clean 5000 -throt vertical -buffer 8 -size 8 8 -tquota 1 -predict 0 -tsh 93.1 -tla 1 -sen_alloc table ./doc/sensor_placement.txt -temp_recover regression ./doc/rector_linear_coef.txt ./doc/rector_linear_coef1.txt ./doc/rector_linear_ref.txt
+

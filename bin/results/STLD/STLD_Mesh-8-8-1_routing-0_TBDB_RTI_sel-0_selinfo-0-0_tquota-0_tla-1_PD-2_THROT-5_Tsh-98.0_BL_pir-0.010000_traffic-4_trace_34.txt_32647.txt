@@ -1,0 +1,30 @@
+XY0 = [
+0	0	0	0	0	0	0	0	0
+0	0	0	0	0	0	0	0	0
+0	0	0	0	0	0	0	0	0
+0	0	0	0	0	0	0	0	0
+0	0	0	0	0	0	0	0	0
+0	0	0	0	0	0	0	0	0
+0	0	0	0	0	0	0	0	0
+0	0	0	7256	7256	7256	7256	0	0
+0	0	0	0	0	0	0	0	0
+]
+color_range = [0 100000];
+figure(1)
+subplot(1,1,1), pcolor(XY0), axis off, caxis( color_range ), colormap(jet)
+set(gcf, 'PaperPosition', [1 1 7 30]);
+print(gcf,'-djpeg','-r0','_Mesh-8-8-1_routing-0_TBDB_RTI_sel-0_selinfo-0-0_tquota-0_tla-1_PD-2_THROT-5_Tsh-98.0_BL_pir-0.010000_traffic-4_trace_34.txt_32647.txt.jpg')
+XY0 = [
+0	0	0	0	0	0	0	0	0
+0	0	0	0	0	0	0	0	0
+0	0	0	0	0	0	0	0	0
+0	0	0	0	0	0	0	0	0
+0	0	0	0	0	0	0	0	0
+0	0	0	0	0	0	0	0	0
+0	0	0	0	0	0	0	0	0
+0	0	0	7256	7256	7256	7256	0	0
+0	0	0	0	0	0	0	0	0
+]
+color_range = [0 100000];
+figure(1)
+subplot(1,1,1), pcolor(XY0), axis off, caxis( color_range ), colormap(jet)

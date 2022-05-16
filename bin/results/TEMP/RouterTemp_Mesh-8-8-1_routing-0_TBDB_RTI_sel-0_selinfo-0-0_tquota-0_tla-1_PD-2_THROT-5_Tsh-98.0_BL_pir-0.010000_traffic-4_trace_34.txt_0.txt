@@ -1,0 +1,34 @@
+#Steady State Temp.
+XY0 = [
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	0
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	0
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	0
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	0
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	0
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	0
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	0
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	0
+0	0	0	0	0	0	0	0	0
+]
+color_range = [80 110];
+figure(1)
+subplot(1,1,1), pcolor(XY0), axis off, caxis( color_range ), colormap(jet)
+set(gcf, 'PaperPosition', [1 1 7 30]);
+print(gcf,'-djpeg','-r0','SS_Mesh-8-8-1_routing-0_TBDB_RTI_sel-0_selinfo-0-0_tquota-0_tla-1_PD-2_THROT-5_Tsh-98.0_BL_pir-0.010000_traffic-4_trace_34.txt_0.txt-1001.jpg')
+
+XY0 = [
+85.049	85.0485	85.0498	85.0474	85.0495	85.0492	85.0485	85.0492	0
+85.0505	85.0516	85.0538	85.0507	85.0521	85.0503	85.0495	85.0516	0
+85.054	85.0532	85.0567	85.0531	85.0537	85.0529	85.0559	85.0539	0
+85.0581	85.0567	85.0607	85.0555	85.0569	85.0547	85.0572	85.0566	0
+85.0606	85.0581	85.062	85.058	85.0595	85.0582	85.0582	85.0577	0
+85.0632	85.0618	85.0647	85.061	85.0606	85.0599	85.0611	85.0601	0
+85.0648	85.0642	85.0674	85.0648	85.0632	85.0607	85.0636	85.0625	0
+85.2246	85.2397	85.199	85.1396	85.1189	85.0986	85.0813	85.0651	0
+0	0	0	0	0	0	0	0	0
+]
+color_range = [80 110];
+figure(1)
+subplot(1,1,1), pcolor(XY0), axis off, caxis( color_range ), colormap(jet)
+set(gcf, 'PaperPosition', [1 1 7 30]);
+print(gcf,'-djpeg','-r0','R_Mesh-8-8-1_routing-0_TBDB_RTI_sel-0_selinfo-0-0_tquota-0_tla-1_PD-2_THROT-5_Tsh-98.0_BL_pir-0.010000_traffic-4_trace_34.txt_32725.txt-100001.jpg')
